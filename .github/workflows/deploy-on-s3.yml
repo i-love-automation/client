@@ -1,6 +1,10 @@
 ---
 name: Deploy on S3
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
@@ -14,6 +18,14 @@ jobs:
     steps:
       - name: Checkout client-application repository
         uses: actions/checkout@v3
+
+      - name: Release (Generate environment.ts file)
+        run: |
+          echo "export const ENV = {
+            auth: {
+              clientId: '${{ vars.COGNITO_APP_INTEGRATION_ID }}'
+            }
+          };" > src/environment.ts
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
