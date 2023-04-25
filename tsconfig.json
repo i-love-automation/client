@@ -1,7 +1,7 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Taxi client application",
+  "display": "PROJECT client application",
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {

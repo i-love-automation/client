@@ -1,6 +1,6 @@
-# Taxi Gestion Client
+# PROJECT_PRETTY Client
 
-Outil de gestion à destination des flottes de taxi, particulièrement des vsl (véhicules sanitaires légers).
+ABOUT
 
 > Ce dépot est responsable de la partie applicative client.
 
